@@ -9,3 +9,15 @@ npm install ts-node-dev -D
 Automatic reload on page
 "ts-node-dev src/server.ts" at package.json at script "dev"
 command "npm run dev"
+
+npm install knex
+npm install sqlite3
+npx knex --knexfile .\knexfile.ts migrate:latest
+npm run knex:migrate
+
+npx knex --knexfile .\knexfile.ts seed:latest
+npm run knex:seed
+
+
+npm install cors
+npm install @types/cors -D
