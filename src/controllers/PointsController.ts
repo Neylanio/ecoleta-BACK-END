@@ -49,7 +49,7 @@ class PointsController {
             uf,         
         };
 
-        const insertedIds = await trx('points').insert(point);
+        const insertedIds = await trx('points').insert(point);//sempre retorna o id do registro criado
     
         const point_id = insertedIds[0];
     

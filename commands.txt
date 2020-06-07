@@ -21,3 +21,8 @@ npm run knex:seed
 
 npm install cors
 npm install @types/cors -D
+
+
+npx knex migrate:rollback --all
+npx knex migrate:list
+npx knex migrate:latest

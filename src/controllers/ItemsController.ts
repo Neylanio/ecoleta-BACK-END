@@ -9,11 +9,20 @@ class ItemsController {
             return{
                 id: item.id,
                 title: item.title,
-                image_url: `http://localhost:3333/uploads/${item.image}`
+                image_url: `http://192.168.100.8:3333/uploads/${item.image}`
             }
         });
     
         return response.json(serializeditems);
+    }
+
+    async show(request: Request, response: Response){
+        const { id } = request.params;
+
+        const items = await knex('items').where('id', Number(id)).first();
+
+        return response.json(items) ? items != null : response.status(400).json({message: 'Item not found'});
+
     }
 
 }
