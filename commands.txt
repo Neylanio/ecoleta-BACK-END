@@ -26,3 +26,17 @@ npm install @types/cors -D
 npx knex migrate:rollback --all
 npx knex migrate:list
 npx knex migrate:latest
+
+
+
+//Trabalhar com upload de imagens
+npm install multer
+
+npm install @types/multer -D
+
+
+//Using validations
+npm install celebrate
+
+//Usando o intelisense no typescript
+npm install @types/hapi__joi -D
